@@ -1,302 +1,299 @@
 @import "teamstyle.css";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #F5F5F5;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
 }
 
-th, td {
-    padding: 2pt;
-    text-align: left;
+th,
+td {
+  padding: 10pt;
+  text-align: left;
 }
 
 .userPanel {
-    float: right;
-    padding: 3pt;
+  float: right;
+  padding: 3pt;
 }
 
 .userPanel p {
-    margin: 3pt;
-    font-size: x-small;
+  margin: 3pt;
+  font-size: x-small;
 }
 
 .userPanel img {
-    float: left;
-    width: 15%;
-    height: 15%;
-    border-radius: 50%;
-    margin-right: 5pt;
+  float: left;
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  margin-right: 5pt;
 }
 
 .userPanel hr {
-    margin-top: 6pt;
-    margin-bottom: 3pt;
+  margin-top: 6pt;
+  margin-bottom: 3pt;
 }
 
 .productImage {
-    width: 20%;
-    height: 20%;
-    border-radius: 10%;
+  width: 20%;
+  height: 20%;
+  border-radius: 10%;
 }
 
 .categoryImage {
-    margin-right: 8pt;
-    width: 60pt;
-    height: auto;
-    float: left;
-    border-radius: 10%;
+  margin-right: 8pt;
+  width: 60pt;
+  height: auto;
+  float: left;
+  border-radius: 10%;
 }
 
 td .categoryImage {
-    float: none;
-    margin: 0;
-    width: 70%;
-    height: 70%;
+  float: none;
+  margin: 0;
+  width: 70%;
+  height: 70%;
 }
 
 .hint {
-    color: gray;
+  color: gray;
 }
 
 .errorMessage {
-    color: red;
+  color: red;
 }
 
 .topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: gray;
-  }
-  
-  .topnav li {
-    float: left;
-  }
-  
-  .topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 4pt 5pt;
-    text-decoration: none;
-  }
-  
-  .topnav .selected {
-    background-color: green;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: gray;
+}
+
+.topnav li {
+  float: left;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 4pt 5pt;
+  text-decoration: none;
+}
+
+.topnav .selected {
+  background-color: green;
+}
+
+.topnav li a:hover {
+  background-color: black;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.content:after {
+  display: inline-block;
+  background: #6264a7;
+  content: " ";
+  height: 0;
+  transition: 0.35s ease;
+  bottom: 0;
+  width: 100px;
+  height: 3px;
+  margin: 0 auto;
+  left: 0;
+  transform: none;
+}
+.element {
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+  background: white;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* chart */
+
+.chart-text {
+  font: 16px/1.4em "Montserrat", Arial, sans-serif;
+  fill: #000;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+}
+
+.chart-number {
+  font-size: 0.6em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+}
+
+.chart-label {
+  font-size: 0.2em;
+  text-transform: uppercase;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+
+figure {
+  display: flex;
+  justify-content: spare-around;
+  flex-direction: column;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media (min-width: 768px) {
+  figure {
+    flex-direction: row;
   }
 
-  .topnav li a:hover {
-    background-color: black;
+  .figure-content,
+  .figure-key {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-self: center;
   }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-   
+
+  .figure-content svg {
+    height: auto;
   }
-  .content:after{
-    display: inline-block;
-    background: #6264A7;
-    content: " ";
-    height: 0;
-    transition: .35s ease;
-    bottom: 0;
-    width: 100px;
-    height: 3px;
-    margin: 0 auto;
-    left: 0;
-    transform: none;
+
+  .figure-key {
+    min-width: calc(8 / 12);
   }
-  .element{ 
-    border: none;  
-    border-radius: 6px;
-    margin: 10px;
+
+  .figure-key [class*="shape-"] {
+    margin-right: 6px;
+  }
+
+  .figure-key-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .figure-key-list li {
+    margin: 0 0 8px;
     padding: 10px;
-    background: white;
-   
   }
-  * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;  
+
+  .shape-circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
   }
-  /* chart */
-  
-.chart-text {
-    font: 16px/1.4em "Montserrat", Arial, sans-serif;
-    fill: #000;
-    -moz-transform: translateY(0.25em);
-    -ms-transform: translateY(0.25em);
-    -webkit-transform: translateY(0.25em);
-    transform: translateY(0.25em);
-  }
-  
-  .chart-number {
-    font-size: 0.6em;
-    line-height: 1;
-    text-anchor: middle;
-    -moz-transform: translateY(-0.25em);
-    -ms-transform: translateY(-0.25em);
-    -webkit-transform: translateY(-0.25em);
-    transform: translateY(-0.25em);
-  }
-  
-  .chart-label {
-    font-size: 0.2em;
-    text-transform: uppercase;
-    text-anchor: middle;
-    -moz-transform: translateY(0.7em);
-    -ms-transform: translateY(0.7em);
-    -webkit-transform: translateY(0.7em);
-    transform: translateY(0.7em);
-  
-  }
-  
-  figure {
-    display: flex;
-    justify-content: spare-around;
-    flex-direction: column;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  
-  @media (min-width: 768px) {
-    figure {
-      flex-direction: row;
-    }
-  
-    .figure-content,
-    .figure-key {
-      flex: 1;
-      padding-left: 15px;
-      padding-right: 15px;
-      align-self: center;
-    }
-  
-    .figure-content svg {
-      height: auto;
-    }
-  
-    .figure-key {
-      min-width: calc(8 / 12);
-    }
-  
-    .figure-key [class*="shape-"] {
-      margin-right: 6px;
-    }
-  
-    .figure-key-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  
-    .figure-key-list li{
-      margin: 0 0 8px;
-      padding: 10px;  
-    }
-  
-    .shape-circle {
-      display: inline-block;
-      vertical-align: middle;
-      width: 20px;
-      height: 20px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-    }
-      
-     
+
   .shape-fuschia {
-      background-color: #464775;
+    background-color: #464775;
   }
   .shape-lemon-lime {
-      background-color: #BDBDE6;
+    background-color: #bdbde6;
   }
   .shape-blue {
-      background-color: #DFDEDE;
+    background-color: #dfdede;
   }
-    
-  }
-  div#rOchart {
-    margin: 10px;
-    padding: 10px;
+}
+div#rOchart {
+  margin: 10px;
+  padding: 10px;
 }
 button#btnTaskModule {
-    margin: 10px;
+  margin: 10px;
 }
 
 div#allOrders {
   width: 58%;
 }
-div#allOrders, div#rODiv {
+div#allOrders,
+div#rODiv {
   width: 58%;
 }
-div#allOrders, div#rODiv {
+div#allOrders,
+div#rODiv {
   width: 59%;
 }
 
-div#content {
+div#contentContainer {
   background: #ddd3;
   padding: 10px;
 }
-div#trackerBox{
-  max-width: 500px;
+div#trackerBox {
+  /*max-width: 500px;*/
 }
 
 /*-------categories.html(start)-Added for mobile compatibility---------------*/
 #categoriesPic {
   width: 4rem;
-}   
+}
 
 #categoriesDescription {
   width: 8rem;
 }
 
-#categories{
+#categories {
   overflow: auto;
 }
 
-table#products{
+table#products {
   width: 100%;
   overflow: auto;
 }
-table#products th{
-  width: 8rem;          
-} 
+table#products th {
+  width: 8rem;
+}
 
 /*-------categories.html(end)----------------*/
 
 /*-------myOrders.html(start)-Added for mobile compatibility---------------*/
-#orders{
+#orders {
   width: 100% !important;
 }
 
-.nowrapItem{
+.nowrapItem {
   white-space: nowrap !important;
 }
-  
-div#content{
+
+div#content {
   padding: 1px 1px 6px 8px !important;
 }
 
 @media only screen and (max-width: 785px) {
   div#allOrders {
-      width:auto !important;
+    width: auto !important;
   }
 }
 
 /*-------myOrders.html(end)----------------*/
 
-
 /*-------productDetail.html(start)-Added for mobile compatibility---------------*/
-#productDetailOrders{
+#productDetailOrders {
   width: 100%;
   overflow: auto;
 }
 
-#productDetailsAddress{
+#productDetailsAddress {
   width: 8rem;
 }
 /*-------productDetail.html(end)----------------*/

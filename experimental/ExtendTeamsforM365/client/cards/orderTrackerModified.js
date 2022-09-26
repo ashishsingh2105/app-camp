@@ -58,6 +58,7 @@ export default {
               horizontalAlignment: "Center",
               url: "https://messagecardplayground.azurewebsites.net/assets/CircleGreen_coffee.png",
               altText: "Location A: Coffee",
+              size: "small",
             },
           ],
           width: "auto",
@@ -68,8 +69,9 @@ export default {
           items: [
             {
               type: "TextBlock",
-              text: "**Order #${orderId} out for delivery**",
+              text: "**Order #${orderId} placed**",
               wrap: true,
+              size: "medium",
             },
             {
               type: "ColumnSet",
@@ -121,7 +123,7 @@ export default {
                   items: [
                     {
                       type: "TextBlock",
-                      text: "Delivery team",
+                      text: "Sales team",
                       wrap: true,
                     },
                   ],
@@ -154,6 +156,7 @@ export default {
               type: "Image",
               horizontalAlignment: "Center",
               url: "https://messagecardplayground.azurewebsites.net/assets/Gray_Dot.png",
+              size: "small",
             },
           ],
           width: "auto",
@@ -161,36 +164,7 @@ export default {
         },
         {
           type: "Column",
-          items: [
-            {
-              type: "ColumnSet",
-              columns: [
-                {
-                  type: "Column",
-                  items: [
-                    {
-                      type: "Image",
-                      url: "https://messagecardplayground.azurewebsites.net/assets/car.png",
-                      altText: "Travel by car",
-                    },
-                  ],
-                  width: "auto",
-                },
-                {
-                  type: "Column",
-                  items: [
-                    {
-                      type: "TextBlock",
-                      text: "about 2 days ago",
-                      isSubtle: true,
-                      wrap: true,
-                    },
-                  ],
-                  width: "stretch",
-                },
-              ],
-            },
-          ],
+          items: [{}],
           width: 40,
         },
       ],
@@ -231,6 +205,7 @@ export default {
               horizontalAlignment: "Center",
               url: "https://messagecardplayground.azurewebsites.net/assets/CircleBlue_flight.png",
               altText: "Location B: Flight",
+              size: "small",
             },
           ],
           width: "auto",
@@ -241,8 +216,9 @@ export default {
           items: [
             {
               type: "TextBlock",
-              text: "**Reached Brisbane warehouse**",
+              text: "**Ready to be shipped from Brisbane warehouse**",
               wrap: true,
+              size: "medium",
             },
             {
               type: "ColumnSet",
